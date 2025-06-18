@@ -97,9 +97,10 @@ git clone https://github.com/yourusername/script-colors.git
 3. **Use provided functions** for more advanced output:
 
    ```powershell
-   Print-Line $GREEN "Success!"
-   Print-Line-Color-Bg $YELLOW $BG_BLUE "Warning with blue background"
-   Print-Line-Color-Style $RED $BOLD "Bold red text"
+   Write-Color $GREEN "Success!"
+   Write-ColorBgCombo $YELLOW $BG_BLUE "Warning with blue background"
+   Write-ColorStyle $RED $BOLD "Bold red text"
+   Write-ColorBgStyleUnderline $WHITE $BG_RED $BOLD "Critical!"
    ```
 
 ---
@@ -134,8 +135,8 @@ print_line_color_bg_style $WHITE $BG_RED $BOLD "Critical!"
 
 ```powershell
 Write-Host -NoNewline "$BOLD_RED Error: $RESET Something went wrong."
-Print-Line $UNDERLINE_GREEN "This is underlined green text."
-Print-Line-Color-Bg-Style $WHITE $BG_RED $BOLD "Critical!"
+Write-Color $UNDERLINE_GREEN "This is underlined green text."
+Write-ColorBgStyle $WHITE $BG_RED $BOLD "Critical!"
 ```
 
 ---
@@ -145,6 +146,14 @@ Print-Line-Color-Bg-Style $WHITE $BG_RED $BOLD "Critical!"
 - If colors do not appear as expected, ensure your terminal supports ANSI escape codes.
 - On Windows, use Windows Terminal, PowerShell Core, or enable Virtual Terminal Processing for best results.
 - Always use the `RESET` variable at the end of your colored output to avoid color bleed.
+
+---
+
+## FAQ
+
+### Why do I see warnings like "The variable 'RED' is assigned but never used"?
+
+This is expected! The color and style variables are defined for you to use in your own scripts or interactively. The script itself does not reference them internally, so static analysis tools may warn that they are unused. You can safely ignore these warnings.
 
 ---
 
