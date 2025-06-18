@@ -148,4 +148,8 @@ Print-Line-Color-Bg-Style $WHITE $BG_RED $BOLD "Critical!"
 
 ## License
 
-MIT License. See [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU General Public License v3. See the [LICENSE](LICENSE.md) file for details.
+
+---
+
+[![Back to Top](https://img.shields.io/badge/Back%20to%20Top-%E2%86%A9-blue?style=plastic&logo=github)](#terminal-colors-scripts)
