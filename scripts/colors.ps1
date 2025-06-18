@@ -10,7 +10,7 @@
 #                   Write-Host -NoNewline "$RED This is red text $RESET"
 #               You can also use the colors in functions to print text in different colors.
 #               For example, you can define a function to print a line in a specific color like this:
-#                   function Print-Line {
+#                   function Write-Color {
 #                       param (
 #                           [string]$Color,
 #                           [string]$Text
@@ -25,8 +25,8 @@
 # ====                  FUNCTIONS                   ====
 # ======================================================
 
-# Print a line with a specific color
-function Print-Line {
+# Write a line with a specific color
+function Write-Color {
     param (
         [string]$Color,
         [string]$Text
@@ -34,8 +34,8 @@ function Print-Line {
     Write-Host -NoNewline "$Color$Text$RESET"
 }
 
-# Print a line with a specific background color
-function Print-Line-Bg {
+# Write a line with a specific background color
+function Write-ColorBg {
     param (
         [string]$BgColor,
         [string]$Text
@@ -43,8 +43,8 @@ function Print-Line-Bg {
     Write-Host -NoNewline "$BgColor$Text$RESET"
 }
 
-# Print a line with a specific color and background color
-function Print-Line-Color-Bg {
+# Write a line with a specific color and background color
+function Write-ColorBgCombo {
     param (
         [string]$Color,
         [string]$BgColor,
@@ -53,8 +53,8 @@ function Print-Line-Color-Bg {
     Write-Host -NoNewline "$Color$BgColor$Text$RESET"
 }
 
-# Print a line with a specific style (bold, underline, etc.)
-function Print-Line-Style {
+# Write a line with a specific style (bold, underline, etc.)
+function Write-Style {
     param (
         [string]$Style,
         [string]$Text
@@ -62,8 +62,8 @@ function Print-Line-Style {
     Write-Host -NoNewline "$Style$Text$RESET"
 }
 
-# Print a line with a specific color and style
-function Print-Line-Color-Style {
+# Write a line with a specific color and style
+function Write-ColorStyle {
     param (
         [string]$Color,
         [string]$Style,
@@ -72,8 +72,8 @@ function Print-Line-Color-Style {
     Write-Host -NoNewline "$Color$Style$Text$RESET"
 }
 
-# Print a line with a specific background color and style
-function Print-Line-Bg-Style {
+# Write a line with a specific background color and style
+function Write-BgStyle {
     param (
         [string]$BgColor,
         [string]$Style,
@@ -82,8 +82,8 @@ function Print-Line-Bg-Style {
     Write-Host -NoNewline "$BgColor$Style$Text$RESET"
 }
 
-# Print a line with a specific color, background color, and style
-function Print-Line-Color-Bg-Style {
+# Write a line with a specific color, background color, and style
+function Write-ColorBgStyle {
     param (
         [string]$Color,
         [string]$BgColor,
@@ -91,6 +91,82 @@ function Print-Line-Color-Bg-Style {
         [string]$Text
     )
     Write-Host -NoNewline "$Color$BgColor$Style$Text$RESET"
+}
+
+# Write a line with a specific underline
+function Write-Underline {
+    param (
+        [string]$Text
+    )
+    Write-Host -NoNewline "`e[4m$Text$RESET"
+}
+
+# Write a line with a specific color and underline
+function Write-ColorUnderline {
+    param (
+        [string]$Color,
+        [string]$Text
+    )
+    Write-Host -NoNewline "$Color`e[4m$Text$RESET"
+}
+
+# Write a line with a specific background color and underline
+function Write-BgUnderline {
+    param (
+        [string]$BgColor,
+        [string]$Text
+    )
+    Write-Host -NoNewline "$BgColor`e[4m$Text$RESET"
+}
+
+# Write a line with a specific color, background color, and underline
+function Write-ColorBgUnderline {
+    param (
+        [string]$Color,
+        [string]$BgColor,
+        [string]$Text
+    )
+    Write-Host -NoNewline "$Color$BgColor`e[4m$Text$RESET"
+}
+
+# Write a line with a specific style and underline
+function Write-StyleUnderline {
+    param (
+        [string]$Style,
+        [string]$Text
+    )
+    Write-Host -NoNewline "$Style`e[4m$Text$RESET"
+}
+
+# Write a line with a specific color and style and underline
+function Write-ColorStyleUnderline {
+    param (
+        [string]$Color,
+        [string]$Style,
+        [string]$Text
+    )
+    Write-Host -NoNewline "$Color$Style`e[4m$Text$RESET"
+}
+
+# Write a line with a specific background color and style and underline
+function Write-BgStyleUnderline {
+    param (
+        [string]$BgColor,
+        [string]$Style,
+        [string]$Text
+    )
+    Write-Host -NoNewline "$BgColor$Style`e[4m$Text$RESET"
+}
+
+# Write a line with a specific color, background color, style, and underline
+function Write-ColorBgStyleUnderline {
+    param (
+        [string]$Color,
+        [string]$BgColor,
+        [string]$Style,
+        [string]$Text
+    )
+    Write-Host -NoNewline "$Color$BgColor$Style`e[4m$Text$RESET"
 }
 
 # ======================================================

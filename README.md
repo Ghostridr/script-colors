@@ -24,6 +24,8 @@ This repository provides two scripts—one for Bash (`colors.sh`) and one for Po
 
 These scripts define a comprehensive set of color, style, and background variables for use in terminal output. They also provide functions to print text with specific colors, backgrounds, and styles, making it easy to enhance your scripts or command-line tools with visually distinct output.
 
+The Bash script (`colors.sh`) is designed for use in Linux and macOS terminals, while the PowerShell script (`colors.ps1`) is tailored for Windows PowerShell and PowerShell Core on Windows.
+
 ---
 
 ## Features
@@ -151,5 +153,4 @@ Print-Line-Color-Bg-Style $WHITE $BG_RED $BOLD "Critical!"
 This project is licensed under the GNU General Public License v3. See the [LICENSE](LICENSE.md) file for details.
 
 ---
-
 [![Back to Top](https://img.shields.io/badge/Back%20to%20Top-%E2%86%A9-blue?style=plastic&logo=github)](#terminal-colors-scripts)

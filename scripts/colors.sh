@@ -117,6 +117,66 @@ print_line_color_bg_style_text() {
     echo -e "${color}${bg_color}${style}${text}${RESET}"
 }
 
+# Print a line with a specific underline
+print_line_underline() {
+    local text=$1 # The text to print
+    echo -e "\033[4m${text}${RESET}"
+}
+
+# Print a line with a specific color and underline
+print_line_color_underline() {
+    local color=$1 # The color of the text
+    local text=$2 # The text to print
+    echo -e "${color}\033[4m${text}${RESET}"
+}
+
+# Print a line with a specific background color and underline
+print_line_bg_underline() {
+    local bg_color=$1 # The background color of the text
+    local text=$2 # The text to print
+    echo -e "${bg_color}\033[4m${text}${RESET}"
+}
+
+# Print a line with a specific color, background color, and underline
+print_line_color_bg_underline() {
+    local color=$1 # The color of the text
+    local bg_color=$2 # The background color of the text
+    local text=$3 # The text to print
+    echo -e "${color}${bg_color}\033[4m${text}${RESET}"
+}
+
+# Print a line with a specific style and underline
+print_line_style_underline() {
+    local style=$1 # The style of the text
+    local text=$2 # The text to print
+    echo -e "${style}\033[4m${text}${RESET}"
+}
+
+# Print a line with a specific color and style and underline
+print_line_color_style_underline() {
+    local color=$1 # The color of the text
+    local style=$2 # The style of the text
+    local text=$3 # The text to print
+    echo -e "${color}${style}\033[4m${text}${RESET}"
+}
+
+# Print a line with a specific background color and style and underline
+print_line_bg_style_underline() {
+    local bg_color=$1 # The background color of the text
+    local style=$2 # The style of the text
+    local text=$3 # The text to print
+    echo -e "${bg_color}${style}\033[4m${text}${RESET}"
+}
+
+# Print a line with a specific color, background color, style, and underline
+print_line_color_bg_style_underline() {
+    local color=$1 # The color of the text
+    local bg_color=$2 # The background color of the text
+    local style=$3 # The style of the text
+    local text=$4 # The text to print
+    echo -e "${color}${bg_color}${style}\033[4m${text}${RESET}"
+}
+
 # ======================================================
 # ====                   COLORS                     ====
 # ======================================================
